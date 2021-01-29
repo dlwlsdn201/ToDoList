@@ -9,20 +9,22 @@
 
 </head>
 <body>
-    <div class="clock" id="js-clock">
-        <h1 id="js-clock-content">00:00</h1>
+    <div class="contentsWrapper">
+        <div class="clock" id="js-clock">
+            <h1 id="js-clock-content">00:00</h1>
+        </div>
+        <span class="js-weather" id="js-weather"></span>
+        <form class="UserForm" id="js-UserForm">
+            <input type="text" placeholder="Name"/>
+        </form>
+        <h4 id="js-Greeting"></h4>
+        <form action="" class="toDoForm" id="js-toDoForm">
+            <input type="text" placeholder="To Do"/>
+        </form>
+        <ul class="js-ToDoList" id="toDoList">
+    
+        </ul>
     </div>
-    <form class="UserForm" id="js-UserForm">
-        <input type="text" placeholder="Name"/>
-    </form>
-    <h4 id="js-Greeting"></h4>
-    <form action="" class="toDoForm" id="js-toDoForm">
-        <input type="text" placeholder="To Do"/>
-    </form>
-    <ul class="js-ToDoList" id="toDoList">
-
-    </ul>
-    <span class="js-weather" id="js-weather"></span>
     <script src="./js/clock.js"></script>
     <script src="./js/greeting.js"></script>
     <script src="./js/toDoList.js"></script>

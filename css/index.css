@@ -2,6 +2,9 @@ body{
     color: #fcfcfc;
 }
 
+.contentsWrapper{
+    background : black;
+}
 
 .bgImage{
     position: absolute;
