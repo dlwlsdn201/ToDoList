@@ -32,8 +32,9 @@ askForName = () => {
 // 인사말 요소에 텍스트 삽입
 drawGreeting = (text) => {
     FORM.classList.remove(SHOWING);
+    document.body.removeChild(FORM);
     GREETING.classList.add(SHOWING);
-    GREETING.innerText = `Hello ${text}`;
+    GREETING.innerText = `어서오세요. ${text} 님!`;
 }
 
 //로컬스토리지에서 userName value 로드하여 drawGreeting 함수에 전달
