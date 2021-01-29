@@ -15,7 +15,7 @@ body{
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    background : rgba(0, 0, 0, 0.5);
+    background : rgba(0, 0, 0, 0.2);
     height: auto;
     padding: 2em 5em;
 }
