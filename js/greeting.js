@@ -1,6 +1,7 @@
 const FORM = document.querySelector('#js-UserForm'),
 INPUT = FORM.querySelector("input"),
-GREETING = document.querySelector('#js-Greeting');
+GREETING = document.querySelector('#js-Greeting'),
+WRAPPER = document.querySelector('#wrapper');
 
 const userKey = 'currentUser',
 SHOWING = 'showing';
@@ -32,7 +33,7 @@ askForName = () => {
 // 인사말 요소에 텍스트 삽입
 drawGreeting = (text) => {
     FORM.classList.remove(SHOWING);
-    document.body.removeChild(FORM);
+    WRAPPER.removeChild(FORM);
     GREETING.classList.add(SHOWING);
     GREETING.innerText = `어서오세요. ${text} 님!`;
 }

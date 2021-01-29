@@ -1,9 +1,23 @@
 body{
     color: #fcfcfc;
+    padding : 10% auto;
+    height: 98vh;
+    overflow-y: hidden;
+    width: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contentsWrapper{
-    background : black;
+    display : flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background : rgba(0, 0, 0, 0.5);
+    height: auto;
+    padding: 2em 5em;
 }
 
 .bgImage{
@@ -14,6 +28,36 @@ body{
     height: 100%;
     z-index: -5;
     animation: fadeIn .7s linear;
+}
+
+.toDoInput{
+    font-size: 1em;
+    height: 1.5em;
+    width: 12em;
+}
+
+.showing{
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size : 1.3em;
+}
+
+.ToDoList{
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 243, 68, 0.548);
+    width: 12.3em;
+    min-height : 8em;
+    height : auto;
+    padding : 1em 1.2em;
+}
+
+ul{
+    line-height: 1.8em;
+    list-style: inside;
+}
+
+.clock > h1{
+    margin: 0;
 }
 
 
