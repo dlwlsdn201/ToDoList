@@ -33,7 +33,6 @@ body{
 }
 
 
-
 .bgImage{
     position: absolute;
     top: 0;
@@ -59,7 +58,7 @@ body{
 .ToDoList{
     box-sizing: border-box;
     border: 1px solid rgba(255, 243, 68, 0.548);
-    width: 12.3em;
+    width: 15em;
     min-height : 8em;
     height : auto;
     padding : 1em 1.2em;
