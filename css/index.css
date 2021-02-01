@@ -10,15 +10,29 @@ body{
     align-items: center;
 }
 
+
+@keyframes fadeIn2 {
+    0%{
+        opacity: 0;
+    }30%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
 .contentsWrapper{
     display : flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    background : rgba(0, 0, 0, 0.2);
+    background : rgba(0, 0, 0, 0.4);
     height: auto;
     padding: 2em 5em;
+    animation: fadeIn2 1.8s forwards;
 }
+
+
 
 .bgImage{
     position: absolute;
@@ -58,6 +72,20 @@ ul{
 
 .clock > h1{
     margin: 0;
+}
+
+.js-weather{
+    height: 25px; 
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registBtn{
+    font-size: 1em;
+    margin-left : 0.1em;
 }
 
 

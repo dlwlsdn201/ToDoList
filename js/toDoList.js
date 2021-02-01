@@ -1,6 +1,7 @@
 const toDoForm = document.querySelector('#js-toDoForm'), 
 toDoInput = toDoForm.querySelector('input'),
-toDoList = document.querySelector('#toDoList');
+toDoList = document.querySelector('#toDoList'),
+toDoBtn = toDoForm.querySelector("#inputBtn")
 
 const ToDo_LocalStorage = "toDos";
 let toDos = [];
@@ -71,7 +72,8 @@ loadToDos = () => {
 
 init = () => {
     loadToDos();
-    toDoForm.addEventListener("submit",handleSubmit)
+    toDoForm.addEventListener("submit",handleSubmit);
+    toDoBtn.addEventListener("click", handleSubmit);
 }
 
-init()
+init();
