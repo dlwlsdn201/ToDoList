@@ -3,8 +3,10 @@ INPUT = FORM.querySelector("input"),
 GREETING = document.querySelector('#js-Greeting'),
 WRAPPER = document.querySelector('#wrapper');
 
+
 const userKey = 'currentUser',
-SHOWING = 'showing';
+SHOWING = 'showing',
+EMPTY = 'empty';
 
 
 // INPUT에 입력된 값 로드 & 사용자 이름 저장 & 환영인사말 표시
@@ -25,7 +27,7 @@ saveName = (value) => {
 //userForm class에 'showing'을 추가
 //userForm submit 이벤트 발생 시 hnadleSubmit 호출
 askForName = () => {
-    FORM.classList.add(SHOWING);
+    FORM.classList.add(EMPTY);
     FORM.addEventListener("submit", handleSubmit);
 }
 
@@ -35,6 +37,8 @@ drawGreeting = (text) => {
     FORM.classList.remove(SHOWING);
     WRAPPER.removeChild(FORM);
     GREETING.classList.add(SHOWING);
+    GREETING.classList.add('fadein');
+    GREETING.style.display="block";
     GREETING.innerText = `어서오세요. ${text} 님!`;
 }
 

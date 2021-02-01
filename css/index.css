@@ -11,25 +11,28 @@ body{
 }
 
 
-@keyframes fadeIn2 {
-    0%{
-        opacity: 0;
-    }30%{
-        opacity: 0;
-    }100%{
-        opacity: 1;
-    }
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn2 1.8s forwards;
+}
+
+.userForm{
+    margin-top: 1em;
 }
 
 .contentsWrapper{
     display : flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background : rgba(0, 0, 0, 0.4);
     height: auto;
-    padding: 2em 5em;
-    animation: fadeIn2 1.8s forwards;
+    box-sizing: border-box;
+    padding: 2em 3em;
 }
 
 
@@ -43,16 +46,13 @@ body{
     animation: fadeIn .7s linear;
 }
 
-.toDoInput{
-    font-size: 1em;
-    height: 1.5em;
-    width: 12em;
-}
 
 .showing{
     font-weight: 700;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size : 1.3em;
+    font-size : 1.8em;
+    margin: 0.5em 0 0 0;
+
 }
 
 .ToDoList{
@@ -62,6 +62,11 @@ body{
     min-height : 8em;
     height : auto;
     padding : 1em 1.2em;
+}
+input{
+    font-size: 1em;
+    height: 1.5em;
+    width: 12em;
 }
 
 ul{
@@ -78,15 +83,51 @@ ul{
 }
 
 form{
-    display: flex;
-    justify-content: space-between;
+    margin: 0.2em 0;
+    padding: 0;
+    width: auto;
 }
 
-.registBtn{
+.js-Greeting{
+    display: none;
+}
+
+.fadein {
+    animation: fadeIn3 1.5s forwards;
+}
+
+.underline{
+    height: 0;
+    margin: 0;
+    padding: 0;
+    animation: line 1s 1s forwards;
+    border-bottom : 1px solid white;
+    margin: 0.5em 0 2em 0;
+
+}
+
+form > button { 
+    align-self: stretch;
+
+}
+
+button{
     font-size: 1em;
     margin-left : 0.1em;
 }
 
+@keyframes line {
+    0%{
+        display: none;
+        width: 0;
+    }50%{
+        display: block;
+        width: 0;
+    }100%{
+        display: block;
+        width: 15em;
+    }
+}
 
 @keyframes fadeIn {
     from{
@@ -94,4 +135,27 @@ form{
     }to{
         opacity: 1;
     }
+}
+@keyframes fadeIn2 {
+    0%{
+        opacity: 0;
+    }30%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+@keyframes fadeIn3 {
+    0%{
+        opacity: 0;
+        
+    }100%{
+        opacity: 1;
+    }
+}
+
+.resetBtn{
+    height: 3em;
+    width: 4em;
+    align-self: flex-end;
 }
