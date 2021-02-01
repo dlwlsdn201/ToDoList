@@ -20,10 +20,11 @@ deleteToDo = (event) => {
 
     //filter 함수를 사용하여 삭제 li 요소 외 나머지 li들로 새로운 배열을 생성.
     const cleanToDos = toDos.filter((toDo)=>{
-        return toDo.id !== li.id;
+        return toDo.id !== parseInt(li.id);
     });
     toDos = cleanToDos;
     saveToDos();
+    
 
 }
 
