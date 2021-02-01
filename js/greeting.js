@@ -1,7 +1,8 @@
 const FORM = document.querySelector('#js-UserForm'),
 INPUT = FORM.querySelector("input"),
 GREETING = document.querySelector('#js-Greeting'),
-WRAPPER = document.querySelector('#wrapper');
+WRAPPER = document.querySelector('#wrapper'),
+LINE = document.querySelector(".underline");
 
 
 const userKey = 'currentUser',
@@ -38,6 +39,8 @@ drawGreeting = (text) => {
     WRAPPER.removeChild(FORM);
     GREETING.classList.add(SHOWING);
     GREETING.classList.add('fadein');
+    LINE.classList.remove('Off');
+    LINE.classList.add('On');
     GREETING.style.display="block";
     GREETING.innerText = `어서오세요. ${text} 님!`;
 }

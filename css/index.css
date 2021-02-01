@@ -55,14 +55,7 @@ body{
 
 }
 
-.ToDoList{
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 243, 68, 0.548);
-    width: 15em;
-    min-height : 8em;
-    height : auto;
-    padding : 1em 1.2em;
-}
+
 input{
     font-size: 1em;
     height: 1.5em;
@@ -83,7 +76,9 @@ ul{
 }
 
 form{
-    margin: 0.2em 0;
+    display: flex;
+    align-items: center;
+    margin:  0;
     padding: 0;
     width: auto;
 }
@@ -96,7 +91,7 @@ form{
     animation: fadeIn3 1.5s forwards;
 }
 
-.underline{
+.On{
     height: 0;
     margin: 0;
     padding: 0;
@@ -125,7 +120,7 @@ button{
         width: 0;
     }100%{
         display: block;
-        width: 15em;
+        width: 10em;
     }
 }
 
@@ -158,4 +153,28 @@ button{
     height: 3em;
     width: 4em;
     align-self: flex-end;
+}
+
+.toDoList-Wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top : 1.5em;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-right: 1px solid white;
+    border-bottom-right-radius: 25px;
+    border-top: 3px solid white;
+    padding: 1em 0;
+}
+
+.toDoList{
+    box-sizing: border-box;
+    border: 1px dashed;
+    width: 15em;
+    min-height : 8em;
+    height : auto;
+    padding : 1em 1.2em;
 }
