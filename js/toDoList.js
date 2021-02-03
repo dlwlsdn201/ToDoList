@@ -44,8 +44,8 @@ paintToDo = (text) => {
 
     // ul 태그에 toDo li 태그를 추가
     span.innerText = text;
-    li.appendChild(delBtn);
     li.appendChild(span);
+    li.appendChild(delBtn);
     li.id = newId;
     toDoList.appendChild(li);
 

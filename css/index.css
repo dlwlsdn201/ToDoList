@@ -1,6 +1,6 @@
-body{
+body {
     color: #fcfcfc;
-    padding : 10% auto;
+    padding: 10% auto;
     height: 98vh;
     overflow-y: hidden;
     width: auto;
@@ -10,9 +10,7 @@ body{
     align-items: center;
 }
 
-
-
-.container{
+.container {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -20,70 +18,81 @@ body{
     animation: fadeIn2 1.8s forwards;
 }
 
-.userForm{
+.userForm {
     margin-top: 1em;
 }
 
-.contentsWrapper{
-    display : flex;
+.contentsWrapper {
+    display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background : rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     height: auto;
     box-sizing: border-box;
     padding: 2em 3em;
+    border-radius: 10px;
 }
 
-
-.bgImage{
+.bgImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -5;
-    animation: fadeIn .7s linear;
+    animation: fadeIn 0.7s linear;
 }
 
-
-.showing{
+.showing {
     font-weight: 700;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size : 1.8em;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 1.8em;
     margin: 0.5em 0 0 0;
-
 }
 
-
-input{
+input {
     font-size: 1em;
     height: 1.5em;
     width: 12em;
 }
 
-ul{
+ul {
     line-height: 1.8em;
     list-style: inside;
 }
 
-.clock > h1{
+li {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    margin: 0.2em auto;
+    padding-top: 0.3em;
+}
+
+li:first-child{
+    border: none;
+}
+
+
+
+.clock > h1 {
     margin: 0;
 }
 
-.js-weather{
-    height: 25px; 
+.js-weather {
+    height: 25px;
 }
 
-form{
+form {
     display: flex;
     align-items: center;
-    margin:  0;
+    margin: 0;
     padding: 0;
     width: auto;
 }
 
-.js-Greeting{
+.js-Greeting {
     display: none;
 }
 
@@ -91,76 +100,79 @@ form{
     animation: fadeIn3 1.5s forwards;
 }
 
-.On{
+.On {
     height: 0;
     margin: 0;
     padding: 0;
     animation: line 1s 1s forwards;
-    border-bottom : 1px solid white;
+    border-bottom: 1px solid white;
     margin: 0.5em 0 2em 0;
-
 }
 
-form > button { 
+form > button {
     align-self: stretch;
-
 }
 
-button{
+button {
     font-size: 1em;
-    margin-left : 0.1em;
+    margin-left: 0.1em;
 }
 
 @keyframes line {
-    0%{
+    0% {
         display: none;
         width: 0;
-    }50%{
+    }
+    50% {
         display: block;
         width: 0;
-    }100%{
+    }
+    100% {
         display: block;
         width: 10em;
     }
 }
 
 @keyframes fadeIn {
-    from{
+    from {
         opacity: 0;
-    }to{
+    }
+    to {
         opacity: 1;
     }
 }
 @keyframes fadeIn2 {
-    0%{
+    0% {
         opacity: 0;
-    }30%{
+    }
+    30% {
         opacity: 0;
-    }100%{
+    }
+    100% {
         opacity: 1;
     }
 }
 @keyframes fadeIn3 {
-    0%{
+    0% {
         opacity: 0;
-        
-    }100%{
+    }
+    100% {
         opacity: 1;
     }
 }
 
-.resetBtn{
+.resetBtn {
     height: 3em;
     width: 4em;
     align-self: flex-end;
 }
 
-.toDoList-Wrapper{
+.toDoList-Wrapper {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    margin-top : 1.5em;
+    margin-top: 1.5em;
     width: 100%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -170,11 +182,11 @@ button{
     padding: 1em 0;
 }
 
-.toDoList{
+.toDoList {
     box-sizing: border-box;
     border: 1px dashed;
     width: 15em;
-    min-height : 8em;
-    height : auto;
-    padding : 1em 1.2em;
+    min-height: 8em;
+    height: auto;
+    padding: 1em 1.2em;
 }
