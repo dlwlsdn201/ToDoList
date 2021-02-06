@@ -49,13 +49,13 @@ function setColorWeatherIcon(TempIcon, temp){
 
 function getWeatherIcon(temp){
     if(temp < 10){
-        return 'fa-temperature-low';
+        return 'fa-thermometer-empty';
     }else if(10 <= temp && temp < 17){
-        return 'fa-temperature-quarter';
+        return 'fa-thermometer-quarter';
     }else if(17 <= temp && temp < 22){
-        return 'fa-temperature-half';
+        return 'fa-thermometer-half';
     }else if(22 <= temp && temp <26){
-        return 'fa-temperature-three-quaters';
+        return 'fa-thermometer-three-quarters';
     }else{
         return 'fa-temperature-high';
     }
