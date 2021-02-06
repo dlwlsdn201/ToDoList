@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -82,6 +83,7 @@ body {
 
 .contentsWrapper {
     display: flex;
+    // position: relative;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
@@ -213,10 +215,26 @@ button {
 }
 
 .resetBtn {
-    height: 3em;
-    width: 4em;
+    z-index:-1;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 2em;
+    width: 7em;
     align-self: flex-end;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    opacity: 0.4;
+    color: #808080;
+
+    &:hover {
+        color: white;
+        opacity: 1;
+        cursor: pointer;
+    }
+    
 }
+
 
 .toDoList-Wrapper {
     display: flex;

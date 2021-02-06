@@ -17,7 +17,6 @@ function getWeather(lat, lng){
             const PlaceICON = document.createElement('i');
             
             temperatureSPAN.innerText = `${temperature}℃`
-            
             placeSPAN.innerText = `${place}`;
             
             temperatureSPAN.classList.add('temp');
