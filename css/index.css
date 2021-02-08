@@ -35,6 +35,7 @@ body {
           align-items: center;
   -webkit-animation: fadeIn2 1.8s forwards;
           animation: fadeIn2 1.8s forwards;
+  width: 35em;
 }
 
 .js-weather {
@@ -42,12 +43,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: auto;
-  font-size: 1.4em;
-  width: 100%;
+  font-size: 1.5em;
+  width: 60%;
   line-height: 1.7em;
   border-top: 0.5px solid white;
   border-right: 2px solid white;
@@ -134,6 +134,7 @@ body {
           box-sizing: border-box;
   padding: 2em 3em;
   border-radius: 10px;
+  width: 100%;
 }
 
 .bgImage {
@@ -158,7 +159,8 @@ body {
 input {
   font-size: 1em;
   height: 1.5em;
-  width: 12em;
+  width: 15em;
+  border-radius: 5px;
 }
 
 ul {
@@ -217,6 +219,7 @@ form > button {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  border-radius: 5px;
 }
 
 button {
@@ -359,11 +362,15 @@ button {
   padding: 1em 0;
 }
 
+.toDoList-Wrapper > strong {
+  font-size: 2em;
+}
+
 .toDoList {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px dashed;
-  width: 15em;
+  width: 90%;
   min-height: 8em;
   height: 10.7em;
   padding: 1em 1.2em;
