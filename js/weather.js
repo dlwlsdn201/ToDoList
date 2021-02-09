@@ -87,6 +87,12 @@ function askForCoord(){
 function loadCoords(){
     const loadedCoords = localStorage.getItem(COORDS);
     if(loadedCoords === null){
+        const Default = document.createElement('h4');
+        Default.textContent = '위치 정보가 필요합니다';
+        Default.style.margin = '0';
+        Default.style.textAlign = 'center';
+        WEATHER.style.justifyContent = 'center';
+        tempBLOCK.appendChild(Default);
         askForCoord();
     }else{
         const parseCoords = JSON.parse(loadedCoords);

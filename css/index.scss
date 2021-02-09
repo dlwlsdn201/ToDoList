@@ -35,8 +35,18 @@ body {
     padding: 0.7em;
     padding-top: 0.8em;
 
+    .temp, .place{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .temp .fas {
         font-size: 1.5em;
+    }
+
+    .place i {
+        color: #f5f0b2
     }
 }
 
@@ -49,7 +59,8 @@ body {
     margin-bottom: 1.2em;
     padding: 0.3em 0.7em;
     border-radius: 20px;
-    font-size: 1.3em;
+    font-size: 2.8rem;
+    color: #e7e3e3;
     animation: shadowFadeIn 4s linear 0.5s infinite alternate;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
