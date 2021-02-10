@@ -39,7 +39,7 @@ body {
 }
 
 .js-weather {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,7 +50,7 @@ body {
   width: 60%;
   line-height: 1.7em;
   border-top: 0.5px solid white;
-  border-right: 2px solid white;
+  border-right: 1px solid white;
   border-radius: 20px;
   padding: 0.7em;
   padding-top: 0.8em;
@@ -178,27 +178,6 @@ input {
   height: 1.5em;
   width: 15em;
   border-radius: 5px;
-}
-
-ul {
-  line-height: 1.8em;
-  list-style: inside;
-}
-
-li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 1px solid white;
-  margin: 0.2em auto;
-  padding-top: 0.3em;
-}
-
-li:first-child {
-  border: none;
 }
 
 form {
@@ -334,6 +313,26 @@ button {
   }
 }
 
+@-webkit-keyframes buttonOn {
+  0% {
+    color: #808080;
+  }
+  100% {
+    color: white;
+    opacity: 1;
+  }
+}
+
+@keyframes buttonOn {
+  0% {
+    color: #808080;
+  }
+  100% {
+    color: white;
+    opacity: 1;
+  }
+}
+
 .resetBtn {
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.4);
@@ -345,14 +344,14 @@ button {
   border-radius: 20px;
   font-size: 1.3em;
   font-weight: bold;
-  opacity: 0.4;
+  opacity: 0.8;
   color: #808080;
 }
 
 .resetBtn:hover {
-  color: white;
-  opacity: 1;
   cursor: pointer;
+  -webkit-animation: buttonOn 0.1s 0.1s forwards ease-in-out;
+          animation: buttonOn 0.1s 0.1s forwards ease-in-out;
 }
 
 .toDoList-Wrapper {
@@ -379,7 +378,34 @@ button {
   padding: 1em 0;
 }
 
-.toDoList-Wrapper > strong {
+.toDoList-Wrapper ul {
+  line-height: 1.8em;
+}
+
+.toDoList-Wrapper li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid white;
+  margin: 0.2em auto;
+  padding-top: 0.3em;
+  letter-spacing: 0.02em;
+  list-style-type: square;
+  font-size: 1.2em;
+}
+
+.toDoList-Wrapper li:first-child {
+  border: none;
+}
+
+.toDoList-Wrapper li span {
+  text-align: left;
+}
+
+.toDoList-Wrapper strong {
   font-size: 2em;
 }
 

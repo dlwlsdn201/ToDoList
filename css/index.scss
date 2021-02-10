@@ -22,7 +22,7 @@ body {
 }
 
 .js-weather {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-around;
     height: auto;
@@ -30,7 +30,7 @@ body {
     width: 60%;
     line-height: 1.7em;
     border-top: 0.5px solid white;
-    border-right: 2px solid white;
+    border-right: 1px solid white;
     border-radius: 20px;
     padding: 0.7em;
     padding-top: 0.8em;
@@ -132,23 +132,6 @@ input {
     border-radius: 5px;
 }
 
-ul {
-    line-height: 1.8em;
-    list-style: inside;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid white;
-    margin: 0.2em auto;
-    padding-top: 0.3em;
-
-    &:first-child {
-        border: none;
-    }
-}
-
 form {
     display: flex;
     align-items: center;
@@ -229,6 +212,16 @@ button {
     }
 }
 
+@keyframes buttonOn {
+    0%{
+        color: #808080;
+    }100%{
+        color: white;
+        opacity: 1;
+
+    }
+}
+
 .resetBtn {
     z-index:-1;
     background-color: rgba(0, 0, 0, 0.4);
@@ -239,13 +232,14 @@ button {
     border-radius: 20px;
     font-size: 1.3em;
     font-weight: bold;
-    opacity: 0.4;
+    opacity: 0.8;
     color: #808080;
 
     &:hover {
-        color: white;
-        opacity: 1;
+        // color: white;
+        // opacity: 1;
         cursor: pointer;
+        animation: buttonOn 0.1s 0.1s forwards ease-in-out;
     }
     
 }
@@ -264,10 +258,33 @@ button {
     border-bottom-right-radius: 25px;
     border-top: 3px solid white;
     padding: 1em 0;
-}
 
-.toDoList-Wrapper > strong {
-    font-size: 2em;
+    ul {
+        line-height: 1.8em;
+        // list-style: inside;
+    }
+    
+    li {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid white;
+        margin: 0.2em auto;
+        padding-top: 0.3em;
+        letter-spacing: 0.02em;
+        list-style-type: square;
+        font-size: 1.2em;
+        &:first-child {
+            border: none;
+        }
+
+        span{
+            text-align: left;
+        }
+    }
+
+    strong {
+        font-size: 2em;
+    }
 }
 
 .toDoList {

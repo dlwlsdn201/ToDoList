@@ -34,7 +34,7 @@ function getWeather(lat, lng){
 
 function setColorWeatherIcon(TempIcon, temp){
     if(temp < 10){
-            return TempIcon.style.color = '#0f45f8';
+            return TempIcon.style.color = '#2658fd';
         }else if(10 <= temp && temp < 17){
             return TempIcon.style.color = '#1975dd';
         }else if(17 <= temp && temp < 22){

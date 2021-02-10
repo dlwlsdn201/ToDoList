@@ -5,6 +5,7 @@ toDoBtn = toDoForm.querySelector("#inputBtn")
 
 const ToDo_LocalStorage = "toDos";
 let toDos = [];
+let id = 1;
 
 handleSubmit = (event) => {
     event.preventDefault();
@@ -24,6 +25,7 @@ deleteToDo = (event) => {
         return toDo.id !== parseInt(li.id);
     });
     toDos = cleanToDos;
+    id -= 1;
     saveToDos();
     
 
@@ -43,11 +45,13 @@ paintToDo = (text) => {
     const newId = toDos.length + 1;
 
     // ul 태그에 toDo li 태그를 추가
-    span.innerText = text;
+    span.innerText = id + '.  '+ ' ' +  text;
+    id += 1;
     li.appendChild(span);
     li.appendChild(delBtn);
     li.id = newId;
     toDoList.appendChild(li);
+    li.scrollIntoView();
 
 
     // toDo 각각을 객체로 만들어서 로컬스토리지에 저장할 배열에 삽입
@@ -73,7 +77,7 @@ loadToDos = () => {
 init = () => {
     loadToDos();
     toDoForm.addEventListener("submit",handleSubmit);
-    toDoBtn.addEventListener("click", handleSubmit);
+    toDoBtn.addEventListener("submit", handleSubmit);
 }
 
 init();
