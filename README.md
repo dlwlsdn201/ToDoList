@@ -1,15 +1,12 @@
 # To Do List 웹페이지 제작(Self Project #2)
+     * Created by HTML5 / CSS3 / JavaScript(ES6)*
 
-
-
-Created by HTML5 / CSS3 / JavaScript(ES6)
-
-** Preview
+## **Preview**
 ![화면 캡처 2021-02-14 121539](https://user-images.githubusercontent.com/53039583/107867466-69a20700-6ebe-11eb-8185-5b2fb7ef6d65.png)
 
 
-** Feature
-1. Vanila JavaScript
+## **Feature**
+**1.Vanila JavaScript**
   - 실시간 시계 정보 기능
   - 일일 TO DO 항목들을 리스트 형태로 표시(추가/삭제 기능)
   - 사용자 이름 입력 시 자동으로 인사말이 표현되는 기능
@@ -19,14 +16,14 @@ Created by HTML5 / CSS3 / JavaScript(ES6)
   - 데이터 리셋 버튼 기능(사용자 이름, 위치 정보, to Do 목록 모두 리셋)
   
   
-2. CSS3
+**2. CSS3**
   - flex 스타일을 기반으로 한 레이아웃
   - 간단한 animation 사용
   - SCSS을 이용하여 가독성 개선
   
   
   
- ** Try to see 
+ ## **Try to see**
   : 
 
 
