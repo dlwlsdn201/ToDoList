@@ -41,12 +41,35 @@ body ::-webkit-scrollbar {
           align-items: center;
   -webkit-animation: fadeIn2 1.8s forwards;
           animation: fadeIn2 1.8s forwards;
-  width: 25em;
+  width: 32em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.js-weather {
+.contentsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: rgba(0, 0, 0, 0.2);
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2em 2em;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.js-weather {
+  background: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,7 +78,7 @@ body ::-webkit-scrollbar {
       justify-content: space-around;
   height: auto;
   font-size: 1.3em;
-  width: 70%;
+  width: 75%;
   line-height: 1.7em;
   border-radius: 20px;
   padding: 0.7em;
@@ -94,6 +117,8 @@ body ::-webkit-scrollbar {
   border-radius: 20px;
   font-size: 2.2rem;
   color: #e7e3e3;
+  text-align: center;
+  width: 70%;
   -webkit-animation: shadowFadeIn 4s linear 0.5s infinite alternate;
           animation: shadowFadeIn 4s linear 0.5s infinite alternate;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -136,29 +161,6 @@ body ::-webkit-scrollbar {
 
 .userForm {
   margin-top: 2em;
-}
-
-.contentsWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: rgba(0, 0, 0, 0.4);
-  height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 2em 2em;
-  border-radius: 10px;
-  width: 100%;
 }
 
 .bgImage {
@@ -254,24 +256,23 @@ button:active {
 }
 
 .resetBtn {
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 2em;
   width: 7em;
   -ms-flex-item-align: end;
       align-self: flex-end;
   outline: none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 1.3em;
   font-weight: bold;
-  opacity: 0.8;
   color: #808080;
 }
 
 .resetBtn:hover {
+  background: rgba(0, 0, 0, 0.61);
   cursor: pointer;
-  -webkit-animation: buttonOn 0.1s 0.1s forwards ease-in-out;
-          animation: buttonOn 0.1s 0.1s forwards ease-in-out;
+  -webkit-animation: buttonOn 0.1s 0.05s forwards ease-in-out;
+          animation: buttonOn 0.1s 0.05s forwards ease-in-out;
 }
 
 .toDoList-Wrapper {
@@ -327,8 +328,7 @@ button:active {
 .toDoList {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px dashed;
-  width: 95%;
+  width: 80%;
   min-height: 8em;
   height: 9em;
   padding: 0.5em 0;
@@ -428,21 +428,19 @@ button:active {
 
 @-webkit-keyframes buttonOn {
   0% {
-    color: #808080;
+    color: #6d6d6d;
   }
   100% {
     color: white;
-    opacity: 1;
   }
 }
 
 @keyframes buttonOn {
   0% {
-    color: #808080;
+    color: #6d6d6d;
   }
   100% {
     color: white;
-    opacity: 1;
   }
 }
 /*# sourceMappingURL=index.css.map */

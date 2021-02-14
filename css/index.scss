@@ -26,19 +26,33 @@ body {
     justify-content: center;
     align-items: center;
     animation: fadeIn2 1.8s forwards;
-    width: 25em;
+    width: 32em;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
 }
 
-.js-weather {
+.contentsWrapper {
+    display: flex;
+    // position: relative;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.2);
+    height: auto;
+    box-sizing: border-box;
+    padding: 2em 2em;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.js-weather {
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     position: relative;
     justify-content: space-around;
     height: auto;
     font-size: 1.3em;
-    width: 70%;
+    width: 75%;
     line-height: 1.7em;
     // border-top: 0.5px solid white;
     // border-right: 1px solid white;
@@ -57,7 +71,7 @@ body {
     }
 
     .place i {
-        color: #f5f0b2
+        color: #f5f0b2;
     }
 }
 
@@ -73,6 +87,8 @@ body {
     border-radius: 20px;
     font-size: 2.2rem;
     color: #e7e3e3;
+    text-align: center;
+    width: 70%;
     animation: shadowFadeIn 4s linear 0.5s infinite alternate;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
@@ -103,20 +119,6 @@ body {
 
 .userForm {
     margin-top: 2em;
-}
-
-.contentsWrapper {
-    display: flex;
-    // position: relative;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.4);
-    height: auto;
-    box-sizing: border-box;
-    padding: 2em 2em;
-    border-radius: 10px;
-    width: 100%;
 }
 
 .bgImage {
@@ -204,23 +206,22 @@ button {
 }
 
 .resetBtn {
-    z-index:-1;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     height: 2em;
     width: 7em;
     align-self: flex-end;
     outline: none;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 1.3em;
     font-weight: bold;
-    opacity: 0.8;
     color: #808080;
 
     &:hover {
         // color: white;
-        // opacity: 1;
+        
+        background:rgba(0, 0, 0, 0.61);
         cursor: pointer;
-        animation: buttonOn 0.1s 0.1s forwards ease-in-out;
+        animation: buttonOn 0.1s 0.05s forwards ease-in-out;
     }
     
 }
@@ -267,13 +268,13 @@ button {
 
 .toDoList {
     box-sizing: border-box;
-    border: 1px dashed;
-    width: 95%;
+    width: 80%;
     min-height: 8em;
     height: 9em;
     padding: 0.5em 0;
     padding-left: 0.5em;
     padding-right: 0.1em;
+
     // overflow-y: visible;
 }
 
@@ -324,10 +325,9 @@ button {
 
 @keyframes buttonOn {
     0%{
-        color: #808080;
+        color: #6d6d6d;
     }100%{
         color: white;
-        opacity: 1;
 
     }
 }
