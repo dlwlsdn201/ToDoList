@@ -1,10 +1,14 @@
-#To Do List 웹페이지 제작(Self Project #2)
+# To Do List 웹페이지 제작(Self Project #2)
 
 
 
 Created by HTML5 / CSS3 / JavaScript(ES6)
 
-**Feature
+** Preview
+![화면 캡처 2021-02-14 121539](https://user-images.githubusercontent.com/53039583/107867466-69a20700-6ebe-11eb-8185-5b2fb7ef6d65.png)
+
+
+** Feature
 1. Vanila JavaScript
   - 실시간 시계 정보 기능
   - 일일 TO DO 항목들을 리스트 형태로 표시(추가/삭제 기능)
@@ -22,7 +26,7 @@ Created by HTML5 / CSS3 / JavaScript(ES6)
   
   
   
- **Try to see 
+ ** Try to see 
   : 
 
 
