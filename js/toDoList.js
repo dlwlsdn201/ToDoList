@@ -26,6 +26,11 @@ deleteToDo = (event) => {
     });
     toDos = cleanToDos;
     id -= 1;
+
+    scrollToggle(toDos);
+    console.log(`Delete scrollToggle: ${scrollToggle(toDos)}`);
+    console.log(`toDos.length >2 : ${toDos.length > 2}`);
+    console.log(`toDoList.style.overflowY: ${toDoList.style.overflowY}`);
     saveToDos();
     
 
@@ -34,6 +39,10 @@ deleteToDo = (event) => {
 //로컬 스토리지에 string 형태로 배열을 저장.
 saveToDos = () => {
     localStorage.setItem(ToDo_LocalStorage, JSON.stringify(toDos));
+}
+
+scrollToggle = (TODOS) => {
+    TODOS.length > 2 ? toDoList.style.overflowY = "scroll" : toDoList.style.overflowY = "auto";
 }
 
 paintToDo = (text) => {
@@ -53,7 +62,8 @@ paintToDo = (text) => {
     toDoList.appendChild(li);
     li.scrollIntoView();
 
-
+    scrollToggle(toDos);
+    
     // toDo 각각을 객체로 만들어서 로컬스토리지에 저장할 배열에 삽입
     const toDoObj = {
         text: text,
