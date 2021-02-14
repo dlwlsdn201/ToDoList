@@ -2,7 +2,7 @@
      * Created by HTML5 / CSS3 / JavaScript(ES6)*
 
 ## **Preview**
-![화면 캡처 2021-02-14 121539](https://user-images.githubusercontent.com/53039583/107867466-69a20700-6ebe-11eb-8185-5b2fb7ef6d65.png)
+![Preview](https://user-images.githubusercontent.com/53039583/107867568-3c098d80-6ebf-11eb-8eba-a45836613878.png)
 
 
 ## **Feature**
