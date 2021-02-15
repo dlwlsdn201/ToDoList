@@ -6,6 +6,7 @@ handleImgLoad = () => {
     console.log('finished backgruond loading!');
 }
 
+
 function paintImage(imgNumber){
     const image = new Image();
     image.src = `./images/bg/${imgNumber+1}.jpg`;
