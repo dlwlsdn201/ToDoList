@@ -41,7 +41,7 @@ body ::-webkit-scrollbar {
           align-items: center;
   -webkit-animation: fadeIn2 1.8s forwards;
           animation: fadeIn2 1.8s forwards;
-  width: 32em;
+  width: 35em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -59,7 +59,7 @@ body ::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
