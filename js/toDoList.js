@@ -49,6 +49,7 @@ paintToDo = (text) => {
     const li = document.createElement('li');
     const delBtn = document.createElement('button');
     delBtn.innerHTML = "X";
+    delBtn.classList.add('removeBtn');
     delBtn.addEventListener('click',deleteToDo);
     const span = document.createElement('span');
     const newId = toDos.length + 1;

@@ -26,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     animation: fadeIn2 1.8s forwards;
-    width: 35em;
+    width: 27rem;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
 }
@@ -37,7 +37,7 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     height: auto;
     box-sizing: border-box;
     padding: 2em 2em;
@@ -51,9 +51,9 @@ body {
     position: relative;
     justify-content: space-around;
     height: auto;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     width: 75%;
-    line-height: 1.7em;
+    line-height: 1.5rem;
     // border-top: 0.5px solid white;
     // border-right: 1px solid white;
     border-radius: 20px;
@@ -81,21 +81,24 @@ body {
 }
 
 .clock {
-    margin-top : 0.3em;
-    margin-bottom: 0.5em;
-    padding: 0.3em 0.7em;
+    display: flex;
+    justify-content: center;
+    margin-top : 0.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.5rem;
     border-radius: 20px;
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     color: #e7e3e3;
     text-align: center;
-    width: 70%;
+    width: 75%;
     animation: shadowFadeIn 4s linear 0.5s infinite alternate;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
     font-weight: thin;
 
-    & > h1 {
-        margin: 0;
+    & > h3 {
+        margin: 0 auto;
+        padding: 0 auto;
     }
 }
 
@@ -132,22 +135,72 @@ body {
 }
 
 .showing {
-    font-weight: 700;
+    font-weight: 600;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 1.9em;
+    font-size: 1.8rem;
     margin-top: 0.8em;
     margin-bottom: 0;
 }
 
-input {
+.userInput, .toDoInput {
     font-size: 1em;
     height: 1.8em;
     width: 15em;
     border-radius: 5px;
     outline: none;
-    border: none;
-    // margin-top: 0.3em;
+    color: #ffe59ed5;
+    border: 1px solid #e7e3e38c;
+    background: none;
+    padding: 0 0.5rem;
+    &::placeholder{
+        color: rgba(255, 255, 255, 0.678);
+    }
+
+    &:hover{ 
+        border: 1px solid #e7e3e3;
+    }
+
+    &:focus{
+        background: #1f1f1fcb;
+
+    }
 }
+
+.userBtn, .toDoBtn{
+    align-self: stretch;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #e7e3e38c;
+    color: #808080;
+    background: none;
+    &:hover {
+        cursor: pointer;
+        animation: buttonOn 0.5s forwards ease-in-out;
+        border: 1px solid #e7e3e3;
+    }
+
+    &:active {
+        background: rgba(23, 184, 31, 0.822);
+    }
+}
+
+.removeBtn {
+    outline: none;
+    padding: 1px 8px;
+    border-radius: 50px;
+    border: 1px solid #808080;;
+    color:#808080;
+
+    &:hover {
+        cursor: pointer;
+        animation: removeOn 0.5s forwards ease-in-out;
+    }
+
+    &:active {
+        color: white;
+        background: rgb(255, 67, 67);
+    }
+};
 
 form {
     display: flex;
@@ -173,31 +226,18 @@ form {
     padding: 0;
     animation: line 1s 1s forwards;
     border-bottom: 1px solid white;
-    margin: 0.5em 0 1.8em 0;
-}
-
-form > button {
-    align-self: stretch;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    background: #525252d5
+    margin: 0.5rem 0 1.3rem 0;
 }
 
 button {
     font-size: 1.25em;
     margin-left: 0.1em;
-    background:rgba(0, 0, 0, 0.61);
+    background: none;
     color: #e7e3e3;
     border-radius: 20px;
     outline: none;
     border: none;
     cursor: pointer;
-
-    &:hover{
-        cursor: pointer;
-        background:#ff292969 ;
-    }
 
     &:active{
         cursor: pointer;
@@ -219,9 +259,9 @@ button {
     &:hover {
         // color: white;
         
-        background:rgba(0, 0, 0, 0.61);
+        // background:rgba(0, 0, 0, 0.61);
         cursor: pointer;
-        animation: buttonOn 0.1s 0.05s forwards ease-in-out;
+        animation: buttonOn 0.3s forwards ease-in-out;
     }
     
 }
@@ -262,7 +302,7 @@ button {
     }
 
     strong {
-        font-size: 1.7em;
+        font-size: 1.4rem;
     }
 }
 
@@ -325,9 +365,20 @@ button {
 
 @keyframes buttonOn {
     0%{
-        color: #6d6d6d;
+        color:#808080;
     }100%{
         color: white;
+
+    }
+}
+
+@keyframes removeOn {
+    0%{
+        color:#808080;
+        border: 1px solid #808080;
+    }100%{
+        color: white;
+        border: 1px solid #e7e3e3;
 
     }
 }
