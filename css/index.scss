@@ -29,20 +29,20 @@ body {
     width: 27rem;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
-}
 
-.contentsWrapper {
-    display: flex;
-    // position: relative;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.2);
-    height: auto;
-    box-sizing: border-box;
-    padding: 2em 2em;
-    border-radius: 10px;
-    width: 100%;
+    .contentsWrapper {
+        display: flex;
+        // position: relative;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.2);
+        height: auto;
+        box-sizing: border-box;
+        padding: 2em 2em;
+        border-radius: 10px;
+        width: 100%;
+    }
 }
 
 .js-weather {
@@ -60,6 +60,10 @@ body {
     padding: 0.7em;
     padding-top: 0.8em;
 
+    .fas {
+        margin-right: 0.3em;
+    }
+
     .temp, .place{
         display: flex;
         align-items: center;
@@ -70,15 +74,16 @@ body {
         font-size: 1.5em;
     }
 
+    .place .fas {
+        font-size: 1.2em;
+    }
+
     .place i {
         color: #f5f0b2;
     }
 }
 
-.fas {
-    margin-right: 0.3em;
-    font-size: 1.2em;
-}
+
 
 .clock {
     display: flex;
@@ -304,19 +309,17 @@ button {
     strong {
         font-size: 1.4rem;
     }
+
+    .toDoList {
+        box-sizing: border-box;
+        width: 95%;
+        height: 9em;
+        padding: 0;
+        // overflow-y: visible;
+    }
 }
 
-.toDoList {
-    box-sizing: border-box;
-    width: 80%;
-    min-height: 8em;
-    height: 9em;
-    padding: 0.5em 0;
-    padding-left: 0.5em;
-    padding-right: 0.1em;
 
-    // overflow-y: visible;
-}
 
 @keyframes line {
     0% {

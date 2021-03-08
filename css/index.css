@@ -45,7 +45,7 @@ body ::-webkit-scrollbar {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.contentsWrapper {
+.container .contentsWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +85,10 @@ body ::-webkit-scrollbar {
   padding-top: 0.8em;
 }
 
+.js-weather .fas {
+  margin-right: 0.3em;
+}
+
 .js-weather .temp, .js-weather .place {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,13 +105,12 @@ body ::-webkit-scrollbar {
   font-size: 1.5em;
 }
 
-.js-weather .place i {
-  color: #f5f0b2;
+.js-weather .place .fas {
+  font-size: 1.2em;
 }
 
-.fas {
-  margin-right: 0.3em;
-  font-size: 1.2em;
+.js-weather .place i {
+  color: #f5f0b2;
 }
 
 .clock {
@@ -384,15 +387,12 @@ button:active {
   font-size: 1.4rem;
 }
 
-.toDoList {
+.toDoList-Wrapper .toDoList {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 80%;
-  min-height: 8em;
+  width: 95%;
   height: 9em;
-  padding: 0.5em 0;
-  padding-left: 0.5em;
-  padding-right: 0.1em;
+  padding: 0;
 }
 
 @-webkit-keyframes line {
