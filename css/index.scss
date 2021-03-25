@@ -176,16 +176,16 @@ body {
     border-radius: 5px;
     outline: none;
     border: 1px solid #e7e3e38c;
-    color: #808080;
+    color: #e7e3e3;
     background: none;
     &:hover {
         cursor: pointer;
-        animation: buttonOn 0.5s forwards ease-in-out;
+        // animation: buttonOn 0.5s forwards ease-in-out;
         border: 1px solid #e7e3e3;
     }
 
     &:active {
-        background: rgba(23, 184, 31, 0.822);
+        background: #1f1f1fcb;
     }
 }
 
@@ -371,7 +371,6 @@ button {
         color:#808080;
     }100%{
         color: white;
-
     }
 }
 
