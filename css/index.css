@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -68,7 +69,7 @@ body ::-webkit-scrollbar {
   width: 100%;
 }
 
-.js-weather {
+.container .contentsWrapper .js-weather {
   background: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,11 +86,12 @@ body ::-webkit-scrollbar {
   padding-top: 0.8em;
 }
 
-.js-weather .fas {
+.container .contentsWrapper .js-weather .fas {
   margin-right: 0.3em;
 }
 
-.js-weather .temp, .js-weather .place {
+.container .contentsWrapper .js-weather .temp,
+.container .contentsWrapper .js-weather .place {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,19 +103,19 @@ body ::-webkit-scrollbar {
           justify-content: center;
 }
 
-.js-weather .temp .fas {
+.container .contentsWrapper .js-weather .temp .fas {
   font-size: 1.5em;
 }
 
-.js-weather .place .fas {
+.container .contentsWrapper .js-weather .place .fas {
   font-size: 1.2em;
 }
 
-.js-weather .place i {
+.container .contentsWrapper .js-weather .place i {
   color: #f5f0b2;
 }
 
-.clock {
+.container .contentsWrapper .clock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,43 +136,401 @@ body ::-webkit-scrollbar {
   font-weight: thin;
 }
 
-.clock > h3 {
+.container .contentsWrapper .clock > h3 {
   margin: 0 auto;
   padding: 0 auto;
 }
 
-@-webkit-keyframes shadowFadeIn {
-  0% {
-    -webkit-box-shadow: -2px 2px 88px -65px #faf087;
-    box-shadow: -2px 2px 88px -65px #faf087;
-  }
-  50% {
-    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
-    box-shadow: -2px 2px 42px -2px #faf087;
-  }
-  100% {
-    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
-    box-shadow: -2px 2px 42px -2px #faf087;
-  }
-}
-
-@keyframes shadowFadeIn {
-  0% {
-    -webkit-box-shadow: -2px 2px 88px -65px #faf087;
-    box-shadow: -2px 2px 88px -65px #faf087;
-  }
-  50% {
-    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
-    box-shadow: -2px 2px 42px -2px #faf087;
-  }
-  100% {
-    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
-    box-shadow: -2px 2px 42px -2px #faf087;
-  }
-}
-
-.userForm {
+.container .contentsWrapper .userForm {
   margin-top: 2em;
+}
+
+.container .contentsWrapper .userInput,
+.container .contentsWrapper .toDoInput {
+  font-size: 1em;
+  height: 1.8em;
+  width: 15em;
+  border-radius: 5px;
+  outline: none;
+  color: #ffe59ed5;
+  border: 1px solid #e7e3e38c;
+  background: none;
+  padding: 0 0.5rem;
+}
+
+.container .contentsWrapper .userInput::-webkit-input-placeholder,
+.container .contentsWrapper .toDoInput::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.678);
+}
+
+.container .contentsWrapper .userInput:-ms-input-placeholder,
+.container .contentsWrapper .toDoInput:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.678);
+}
+
+.container .contentsWrapper .userInput::-ms-input-placeholder,
+.container .contentsWrapper .toDoInput::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.678);
+}
+
+.container .contentsWrapper .userInput::placeholder,
+.container .contentsWrapper .toDoInput::placeholder {
+  color: rgba(255, 255, 255, 0.678);
+}
+
+.container .contentsWrapper .userInput:hover,
+.container .contentsWrapper .toDoInput:hover {
+  border: 1px solid #e7e3e3;
+}
+
+.container .contentsWrapper .userInput:focus,
+.container .contentsWrapper .toDoInput:focus {
+  background: #1f1f1fcb;
+}
+
+.container .contentsWrapper .js-Greeting {
+  display: none;
+}
+
+.container .contentsWrapper .resetBtn {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 2em;
+  width: 7em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #808080;
+}
+
+.container .contentsWrapper .resetBtn:hover {
+  cursor: pointer;
+  -webkit-animation: buttonOn 0.3s forwards ease-in-out;
+          animation: buttonOn 0.3s forwards ease-in-out;
+}
+
+.container .contentsWrapper .resetBtn .toDoList-Wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+.container .contentsWrapper .resetBtn .toDoList-Wrapper ul {
+  line-height: 1.8em;
+}
+
+.container .contentsWrapper .resetBtn .toDoList-Wrapper li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid white;
+  margin: 0.2em auto;
+  padding-top: 0.3em;
+  width: 90%;
+  letter-spacing: 0.02em;
+  list-style-type: square;
+  font-size: 1.1em;
+}
+
+.container .contentsWrapper .resetBtn .toDoList-Wrapper li:first-child {
+  border: none;
+}
+
+.container .contentsWrapper .resetBtn .toDoList-Wrapper li span {
+  text-align: left;
+}
+
+.container .contentsWrapper .resetBtn .toDoList-Wrapper strong {
+  font-size: 1.4rem;
+}
+
+.container .contentsWrapper .resetBtn .toDoList-Wrapper .toDoList {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 95%;
+  height: 9em;
+  padding: 0;
+}
+
+.container .contentsWrapper .toDoList-Wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+.container .contentsWrapper .toDoList-Wrapper ul {
+  line-height: 1.8em;
+}
+
+.container .contentsWrapper .toDoList-Wrapper li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid white;
+  margin: 0.2em auto;
+  padding-top: 0.3em;
+  width: 90%;
+  letter-spacing: 0.02em;
+  list-style-type: square;
+  font-size: 1.1em;
+}
+
+.container .contentsWrapper .toDoList-Wrapper li:first-child {
+  border: none;
+}
+
+.container .contentsWrapper .toDoList-Wrapper li span {
+  text-align: left;
+}
+
+.container .contentsWrapper .toDoList-Wrapper strong {
+  font-size: 1.4rem;
+}
+
+.container .contentsWrapper .toDoList-Wrapper .toDoList {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 95%;
+  height: 9em;
+  padding: 0;
+}
+
+@media screen and (max-width: 426px) {
+  .container .contentsWrapper {
+    padding: 5%;
+    border: 1px solid red;
+  }
+  .container .contentsWrapper .js-weather {
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    width: 50%;
+    line-height: 1.5rem;
+    border-radius: 20px;
+    padding: 0.7em;
+    padding-top: 0.8em;
+  }
+  .container .contentsWrapper .js-weather .fas {
+    margin-right: 0.3em;
+  }
+  .container .contentsWrapper .js-weather .temp,
+  .container .contentsWrapper .js-weather .place {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .contentsWrapper .js-weather .temp .fas {
+    font-size: 1.5em;
+  }
+  .container .contentsWrapper .js-weather .place .fas {
+    font-size: 1.2em;
+  }
+  .container .contentsWrapper .js-weather .place i {
+    color: #f5f0b2;
+  }
+  .container .contentsWrapper .clock {
+    padding: 1%;
+    font-size: 2rem;
+    width: 53%;
+  }
+  .container .contentsWrapper .userForm {
+    margin-top: 2em;
+  }
+  .container .contentsWrapper .userInput,
+  .container .contentsWrapper .toDoInput {
+    font-size: 1em;
+    height: 1.8em;
+    width: 15em;
+    border-radius: 5px;
+    outline: none;
+    color: #ffe59ed5;
+    border: 1px solid #e7e3e38c;
+    background: none;
+    padding: 0 0.5rem;
+  }
+  .container .contentsWrapper .userInput::-webkit-input-placeholder,
+  .container .contentsWrapper .toDoInput::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.678);
+  }
+  .container .contentsWrapper .userInput:-ms-input-placeholder,
+  .container .contentsWrapper .toDoInput:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.678);
+  }
+  .container .contentsWrapper .userInput::-ms-input-placeholder,
+  .container .contentsWrapper .toDoInput::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.678);
+  }
+  .container .contentsWrapper .userInput::placeholder,
+  .container .contentsWrapper .toDoInput::placeholder {
+    color: rgba(255, 255, 255, 0.678);
+  }
+  .container .contentsWrapper .userInput:hover,
+  .container .contentsWrapper .toDoInput:hover {
+    border: 1px solid #e7e3e3;
+  }
+  .container .contentsWrapper .userInput:focus,
+  .container .contentsWrapper .toDoInput:focus {
+    background: #1f1f1fcb;
+  }
+  .container .contentsWrapper .js-Greeting {
+    display: none;
+  }
+  .container .contentsWrapper .resetBtn {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 2em;
+    width: 7em;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #808080;
+  }
+  .container .contentsWrapper .resetBtn:hover {
+    cursor: pointer;
+    -webkit-animation: buttonOn 0.3s forwards ease-in-out;
+            animation: buttonOn 0.3s forwards ease-in-out;
+  }
+  .container .contentsWrapper .resetBtn .toDoList-Wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1.5em;
+    width: 100%;
+  }
+  .container .contentsWrapper .resetBtn .toDoList-Wrapper ul {
+    line-height: 1.8em;
+  }
+  .container .contentsWrapper .resetBtn .toDoList-Wrapper li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid white;
+    margin: 0.2em auto;
+    padding-top: 0.3em;
+    width: 90%;
+    letter-spacing: 0.02em;
+    list-style-type: square;
+    font-size: 1.1em;
+  }
+  .container .contentsWrapper .resetBtn .toDoList-Wrapper li:first-child {
+    border: none;
+  }
+  .container .contentsWrapper .resetBtn .toDoList-Wrapper li span {
+    text-align: left;
+  }
+  .container .contentsWrapper .resetBtn .toDoList-Wrapper strong {
+    font-size: 1.4rem;
+  }
+  .container .contentsWrapper .resetBtn .toDoList-Wrapper .toDoList {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 95%;
+    height: 9em;
+    padding: 0;
+  }
+  .container .contentsWrapper .toDoList-Wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1.5em;
+    width: 100%;
+  }
+  .container .contentsWrapper .toDoList-Wrapper ul {
+    line-height: 1.8em;
+  }
+  .container .contentsWrapper .toDoList-Wrapper li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid white;
+    margin: 0.2em auto;
+    padding-top: 0.3em;
+    width: 90%;
+    letter-spacing: 0.02em;
+    list-style-type: square;
+    font-size: 1.1em;
+  }
+  .container .contentsWrapper .toDoList-Wrapper li:first-child {
+    border: none;
+  }
+  .container .contentsWrapper .toDoList-Wrapper li span {
+    text-align: left;
+  }
+  .container .contentsWrapper .toDoList-Wrapper strong {
+    font-size: 1.4rem;
+  }
+  .container .contentsWrapper .toDoList-Wrapper .toDoList {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 95%;
+    height: 9em;
+    padding: 0;
+  }
 }
 
 .bgImage {
@@ -192,43 +552,8 @@ body ::-webkit-scrollbar {
   margin-bottom: 0;
 }
 
-.userInput, .toDoInput {
-  font-size: 1em;
-  height: 1.8em;
-  width: 15em;
-  border-radius: 5px;
-  outline: none;
-  color: #ffe59ed5;
-  border: 1px solid #e7e3e38c;
-  background: none;
-  padding: 0 0.5rem;
-}
-
-.userInput::-webkit-input-placeholder, .toDoInput::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.678);
-}
-
-.userInput:-ms-input-placeholder, .toDoInput:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.678);
-}
-
-.userInput::-ms-input-placeholder, .toDoInput::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.678);
-}
-
-.userInput::placeholder, .toDoInput::placeholder {
-  color: rgba(255, 255, 255, 0.678);
-}
-
-.userInput:hover, .toDoInput:hover {
-  border: 1px solid #e7e3e3;
-}
-
-.userInput:focus, .toDoInput:focus {
-  background: #1f1f1fcb;
-}
-
-.userBtn, .toDoBtn {
+.userBtn,
+.toDoBtn {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -239,12 +564,14 @@ body ::-webkit-scrollbar {
   background: none;
 }
 
-.userBtn:hover, .toDoBtn:hover {
+.userBtn:hover,
+.toDoBtn:hover {
   cursor: pointer;
   border: 1px solid #e7e3e3;
 }
 
-.userBtn:active, .toDoBtn:active {
+.userBtn:active,
+.toDoBtn:active {
   background: #1f1f1fcb;
 }
 
@@ -280,10 +607,6 @@ form {
   width: auto;
 }
 
-.js-Greeting {
-  display: none;
-}
-
 .fadein {
   -webkit-animation: fadeIn3 1.5s forwards;
           animation: fadeIn3 1.5s forwards;
@@ -314,83 +637,6 @@ button:active {
   cursor: pointer;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-}
-
-.resetBtn {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 2em;
-  width: 7em;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  outline: none;
-  border-radius: 10px;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #808080;
-}
-
-.resetBtn:hover {
-  cursor: pointer;
-  -webkit-animation: buttonOn 0.3s forwards ease-in-out;
-          animation: buttonOn 0.3s forwards ease-in-out;
-}
-
-.toDoList-Wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 1.5em;
-  width: 100%;
-}
-
-.toDoList-Wrapper ul {
-  line-height: 1.8em;
-}
-
-.toDoList-Wrapper li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 1px solid white;
-  margin: 0.2em auto;
-  padding-top: 0.3em;
-  width: 90%;
-  letter-spacing: 0.02em;
-  list-style-type: square;
-  font-size: 1.1em;
-}
-
-.toDoList-Wrapper li:first-child {
-  border: none;
-}
-
-.toDoList-Wrapper li span {
-  text-align: left;
-}
-
-.toDoList-Wrapper strong {
-  font-size: 1.4rem;
-}
-
-.toDoList-Wrapper .toDoList {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 95%;
-  height: 9em;
-  padding: 0;
 }
 
 @-webkit-keyframes line {
@@ -520,6 +766,36 @@ button:active {
   100% {
     color: white;
     border: 1px solid #e7e3e3;
+  }
+}
+
+@-webkit-keyframes shadowFadeIn {
+  0% {
+    -webkit-box-shadow: -2px 2px 88px -65px #faf087;
+    box-shadow: -2px 2px 88px -65px #faf087;
+  }
+  50% {
+    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
+    box-shadow: -2px 2px 42px -2px #faf087;
+  }
+  100% {
+    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
+    box-shadow: -2px 2px 42px -2px #faf087;
+  }
+}
+
+@keyframes shadowFadeIn {
+  0% {
+    -webkit-box-shadow: -2px 2px 88px -65px #faf087;
+    box-shadow: -2px 2px 88px -65px #faf087;
+  }
+  50% {
+    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
+    box-shadow: -2px 2px 42px -2px #faf087;
+  }
+  100% {
+    -webkit-box-shadow: -2px 2px 42px -2px #faf087;
+    box-shadow: -2px 2px 42px -2px #faf087;
   }
 }
 /*# sourceMappingURL=index.css.map */
