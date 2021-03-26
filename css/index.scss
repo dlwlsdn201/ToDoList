@@ -272,12 +272,11 @@ button {
     }
         
 // 모바일 레이아웃
-    @media screen and (max-width: 426px){
+    @media screen and (min-width: 375px) and (max-width: 769px){
         .contentsWrapper {
             position: relative;
             padding: 3% 0;
             width: 80%;
-            border: 1px solid red;
 
             .js-weather {
                 background: rgba(0, 0, 0, 0.1);

@@ -342,12 +342,11 @@ button:active {
   background: #ff4343;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (min-width: 375px) and (max-width: 769px) {
   .container .contentsWrapper {
     position: relative;
     padding: 3% 0;
     width: 80%;
-    border: 1px solid red;
   }
   .container .contentsWrapper .js-weather {
     background: rgba(0, 0, 0, 0.1);
