@@ -25,6 +25,33 @@ body ::-webkit-scrollbar {
   display: none;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 0.4em;
+  width: auto;
+}
+
+button {
+  color: #e7e3e3;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  cursor: pointer;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .container {
   position: relative;
   display: -webkit-box;
@@ -50,6 +77,7 @@ body ::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -70,7 +98,7 @@ body ::-webkit-scrollbar {
 }
 
 .container .contentsWrapper .js-weather {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +181,7 @@ body ::-webkit-scrollbar {
   border-radius: 5px;
   outline: none;
   color: #ffe59ed5;
-  border: 1px solid #e7e3e38c;
+  border: 1px solid #e7e3e3da;
   background: none;
   padding: 0 0.5rem;
 }
@@ -188,85 +216,49 @@ body ::-webkit-scrollbar {
   background: #1f1f1fcb;
 }
 
+.container .contentsWrapper .userBtn, .container .contentsWrapper .toDoBtn {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #e7e3e38c;
+  color: #e7e3e3;
+  background: none;
+}
+
+.container .contentsWrapper .userBtn:hover, .container .contentsWrapper .toDoBtn:hover {
+  cursor: pointer;
+  border: 1px solid #e7e3e3;
+}
+
+.container .contentsWrapper .userBtn:active, .container .contentsWrapper .toDoBtn:active {
+  background: #1f1f1fcb;
+}
+
 .container .contentsWrapper .js-Greeting {
   display: none;
 }
 
 .container .contentsWrapper .resetBtn {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 2em;
-  width: 7em;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  position: absolute;
+  bottom: -3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 8rem;
+  padding: 2% 1%;
   outline: none;
   border-radius: 10px;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #808080;
 }
 
 .container .contentsWrapper .resetBtn:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.61);
   cursor: pointer;
   -webkit-animation: buttonOn 0.3s forwards ease-in-out;
           animation: buttonOn 0.3s forwards ease-in-out;
-}
-
-.container .contentsWrapper .resetBtn .toDoList-Wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 1.5em;
-  width: 100%;
-}
-
-.container .contentsWrapper .resetBtn .toDoList-Wrapper ul {
-  line-height: 1.8em;
-}
-
-.container .contentsWrapper .resetBtn .toDoList-Wrapper li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 1px solid white;
-  margin: 0.2em auto;
-  padding-top: 0.3em;
-  width: 90%;
-  letter-spacing: 0.02em;
-  list-style-type: square;
-  font-size: 1.1em;
-}
-
-.container .contentsWrapper .resetBtn .toDoList-Wrapper li:first-child {
-  border: none;
-}
-
-.container .contentsWrapper .resetBtn .toDoList-Wrapper li span {
-  text-align: left;
-}
-
-.container .contentsWrapper .resetBtn .toDoList-Wrapper strong {
-  font-size: 1.4rem;
-}
-
-.container .contentsWrapper .resetBtn .toDoList-Wrapper .toDoList {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 95%;
-  height: 9em;
-  padding: 0;
 }
 
 .container .contentsWrapper .toDoList-Wrapper {
@@ -327,9 +319,34 @@ body ::-webkit-scrollbar {
   padding: 0;
 }
 
+.container .contentsWrapper .toDoList-Wrapper .removeBtn {
+  outline: none;
+  padding: 1%;
+  text-align: center;
+  width: 1.8rem;
+  border-radius: 50px;
+  border: 1px solid #ebebeb;
+  color: #f55050;
+  font-weight: 600;
+  background: none;
+}
+
+.container .contentsWrapper .toDoList-Wrapper .removeBtn:hover {
+  cursor: pointer;
+  -webkit-animation: removeOn 0.5s forwards ease-in-out;
+          animation: removeOn 0.5s forwards ease-in-out;
+}
+
+.container .contentsWrapper .toDoList-Wrapper .removeBtn:active {
+  color: white;
+  background: #ff4343;
+}
+
 @media screen and (max-width: 426px) {
   .container .contentsWrapper {
-    padding: 5%;
+    position: relative;
+    padding: 3% 0;
+    width: 80%;
     border: 1px solid red;
   }
   .container .contentsWrapper .js-weather {
@@ -375,13 +392,12 @@ body ::-webkit-scrollbar {
   }
   .container .contentsWrapper .userInput,
   .container .contentsWrapper .toDoInput {
-    font-size: 1em;
-    height: 1.8em;
-    width: 15em;
+    font-size: 1rem;
+    width: 12rem;
     border-radius: 5px;
     outline: none;
     color: #ffe59ed5;
-    border: 1px solid #e7e3e38c;
+    border: 1px solid #e7e3e3da;
     background: none;
     padding: 0 0.5rem;
   }
@@ -409,76 +425,24 @@ body ::-webkit-scrollbar {
   .container .contentsWrapper .toDoInput:focus {
     background: #1f1f1fcb;
   }
+  .container .contentsWrapper .userBtn, .container .contentsWrapper .toDoBtn {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 0.3rem;
+    border: 1px solid #e7e3e3da;
+    color: #e7e3e3;
+    background: none;
+  }
+  .container .contentsWrapper .userBtn:active, .container .contentsWrapper .toDoBtn:active {
+    -webkit-animation: buttonOn 0.5s forwards ease-in-out;
+            animation: buttonOn 0.5s forwards ease-in-out;
+    background: #1f1f1fcb;
+  }
   .container .contentsWrapper .js-Greeting {
     display: none;
-  }
-  .container .contentsWrapper .resetBtn {
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 2em;
-    width: 7em;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    outline: none;
-    border-radius: 10px;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #808080;
-  }
-  .container .contentsWrapper .resetBtn:hover {
-    cursor: pointer;
-    -webkit-animation: buttonOn 0.3s forwards ease-in-out;
-            animation: buttonOn 0.3s forwards ease-in-out;
-  }
-  .container .contentsWrapper .resetBtn .toDoList-Wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 1.5em;
-    width: 100%;
-  }
-  .container .contentsWrapper .resetBtn .toDoList-Wrapper ul {
-    line-height: 1.8em;
-  }
-  .container .contentsWrapper .resetBtn .toDoList-Wrapper li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    border-top: 1px solid white;
-    margin: 0.2em auto;
-    padding-top: 0.3em;
-    width: 90%;
-    letter-spacing: 0.02em;
-    list-style-type: square;
-    font-size: 1.1em;
-  }
-  .container .contentsWrapper .resetBtn .toDoList-Wrapper li:first-child {
-    border: none;
-  }
-  .container .contentsWrapper .resetBtn .toDoList-Wrapper li span {
-    text-align: left;
-  }
-  .container .contentsWrapper .resetBtn .toDoList-Wrapper strong {
-    font-size: 1.4rem;
-  }
-  .container .contentsWrapper .resetBtn .toDoList-Wrapper .toDoList {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 95%;
-    height: 9em;
-    padding: 0;
   }
   .container .contentsWrapper .toDoList-Wrapper {
     display: -webkit-box;
@@ -494,7 +458,7 @@ body ::-webkit-scrollbar {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 1.5em;
+    margin-top: 1rem;
     width: 100%;
   }
   .container .contentsWrapper .toDoList-Wrapper ul {
@@ -507,7 +471,7 @@ body ::-webkit-scrollbar {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    border-top: 1px solid white;
+    border-top: 1px solid rgba(250, 250, 250, 0.247);
     margin: 0.2em auto;
     padding-top: 0.3em;
     width: 90%;
@@ -527,9 +491,45 @@ body ::-webkit-scrollbar {
   .container .contentsWrapper .toDoList-Wrapper .toDoList {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 95%;
-    height: 9em;
+    width: 90%;
+    height: 8rem;
     padding: 0;
+  }
+  .container .contentsWrapper .toDoList-Wrapper .removeBtn {
+    outline: none;
+    padding: 1%;
+    width: 1.8rem;
+    background: none;
+    border-radius: 50px;
+    border: 1px solid #bebebe;
+    color: #ee3d3d;
+  }
+  .container .contentsWrapper .toDoList-Wrapper .removeBtn:active {
+    color: white;
+    background: #ff4343;
+  }
+  .container .contentsWrapper .showing {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  .container .contentsWrapper .resetBtn {
+    position: absolute;
+    bottom: -2.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 7rem;
+    padding: 3% 0;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #808080;
+  }
+  .container .contentsWrapper .resetBtn:active {
+    color: white;
+    background: rgba(0, 0, 0, 0.699);
+    cursor: pointer;
+    -webkit-animation: buttonOn 0.3s forwards ease-in-out;
+            animation: buttonOn 0.3s forwards ease-in-out;
   }
 }
 
@@ -552,61 +552,6 @@ body ::-webkit-scrollbar {
   margin-bottom: 0;
 }
 
-.userBtn,
-.toDoBtn {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-  border-radius: 5px;
-  outline: none;
-  border: 1px solid #e7e3e38c;
-  color: #e7e3e3;
-  background: none;
-}
-
-.userBtn:hover,
-.toDoBtn:hover {
-  cursor: pointer;
-  border: 1px solid #e7e3e3;
-}
-
-.userBtn:active,
-.toDoBtn:active {
-  background: #1f1f1fcb;
-}
-
-.removeBtn {
-  outline: none;
-  padding: 1px 8px;
-  border-radius: 50px;
-  border: 1px solid #808080;
-  color: #808080;
-}
-
-.removeBtn:hover {
-  cursor: pointer;
-  -webkit-animation: removeOn 0.5s forwards ease-in-out;
-          animation: removeOn 0.5s forwards ease-in-out;
-}
-
-.removeBtn:active {
-  color: white;
-  background: #ff4343;
-}
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding: 0;
-  margin-top: 0.4em;
-  width: auto;
-}
-
 .fadein {
   -webkit-animation: fadeIn3 1.5s forwards;
           animation: fadeIn3 1.5s forwards;
@@ -620,23 +565,6 @@ form {
           animation: line 1s 1s forwards;
   border-bottom: 1px solid white;
   margin: 0.5rem 0 1.3rem 0;
-}
-
-button {
-  font-size: 1.25em;
-  margin-left: 0.1em;
-  background: none;
-  color: #e7e3e3;
-  border-radius: 20px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-
-button:active {
-  cursor: pointer;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
 }
 
 @-webkit-keyframes line {
@@ -749,8 +677,8 @@ button:active {
 
 @-webkit-keyframes removeOn {
   0% {
-    color: #808080;
-    border: 1px solid #808080;
+    border: 1px solid #bebebe;
+    color: #ee3d3d;
   }
   100% {
     color: white;
@@ -760,8 +688,8 @@ button:active {
 
 @keyframes removeOn {
   0% {
-    color: #808080;
-    border: 1px solid #808080;
+    border: 1px solid #bebebe;
+    color: #ee3d3d;
   }
   100% {
     color: white;
