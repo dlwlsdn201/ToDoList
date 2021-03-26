@@ -62,6 +62,7 @@ function getWeatherIcon(temp){
 
 function saveCoords(coordsObj){
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
+    location.reload();
 }
 
 function handleGeoSuccess(position){
@@ -72,6 +73,7 @@ function handleGeoSuccess(position){
         longitude
     };
     saveCoords(coordsObj);
+    
     // getWeather(latitude, longitude);
 }
 
