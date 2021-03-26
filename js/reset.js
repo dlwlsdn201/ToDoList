@@ -15,6 +15,7 @@ resetData = () => {
 
 init = () =>{
     resetBtn.addEventListener("mouseup",resetData);
+    resetBtn.addEventListener("keypress",resetData);
 }
 
 init();

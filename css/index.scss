@@ -163,12 +163,17 @@ button {
             border-radius: 5px;
             outline: none;
             border: 1px solid #e7e3e38c;
+            margin-left: 0.3rem;
             color: #e7e3e3;
             background: none;
             &:hover {
                 cursor: pointer;
                 // animation: buttonOn 0.5s forwards ease-in-out;
                 border: 1px solid #e7e3e3;
+            }
+
+            &:focus {
+                background: #1f1f1fcb;
             }
 
             &:active {
@@ -191,13 +196,17 @@ button {
             border-radius: 10px;
             font-size: 1.3rem;
             font-weight: bold;
-            color: #808080;
+            color: #adadad;
 
             &:hover {
                 color: white;
                 background:rgba(0, 0, 0, 0.61);
                 cursor: pointer;
                 animation: buttonOn 0.3s forwards ease-in-out;
+            }
+
+            &:focus {
+                background: #1f1f1fcb;
             }
         }
 
@@ -441,11 +450,12 @@ button {
                 border-radius: 10px;
                 font-size: 1rem;
                 font-weight: bold;
-                color: #808080;
+                color: #adadad;
     
-                &:active {
+
+                &:focus {
                     color: white;
-                    background:rgba(0, 0, 0, 0.699);
+                    background:rgba(0, 0, 0, 0.61);
                     cursor: pointer;
                     animation: buttonOn 0.3s forwards ease-in-out;
                 }

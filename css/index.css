@@ -223,6 +223,7 @@ button:active {
   border-radius: 5px;
   outline: none;
   border: 1px solid #e7e3e38c;
+  margin-left: 0.3rem;
   color: #e7e3e3;
   background: none;
 }
@@ -230,6 +231,10 @@ button:active {
 .container .contentsWrapper .userBtn:hover, .container .contentsWrapper .toDoBtn:hover {
   cursor: pointer;
   border: 1px solid #e7e3e3;
+}
+
+.container .contentsWrapper .userBtn:focus, .container .contentsWrapper .toDoBtn:focus {
+  background: #1f1f1fcb;
 }
 
 .container .contentsWrapper .userBtn:active, .container .contentsWrapper .toDoBtn:active {
@@ -250,7 +255,7 @@ button:active {
   border-radius: 10px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #808080;
+  color: #adadad;
 }
 
 .container .contentsWrapper .resetBtn:hover {
@@ -259,6 +264,10 @@ button:active {
   cursor: pointer;
   -webkit-animation: buttonOn 0.3s forwards ease-in-out;
           animation: buttonOn 0.3s forwards ease-in-out;
+}
+
+.container .contentsWrapper .resetBtn:focus {
+  background: #1f1f1fcb;
 }
 
 .container .contentsWrapper .toDoList-Wrapper {
@@ -521,11 +530,11 @@ button:active {
     border-radius: 10px;
     font-size: 1rem;
     font-weight: bold;
-    color: #808080;
+    color: #adadad;
   }
-  .container .contentsWrapper .resetBtn:active {
+  .container .contentsWrapper .resetBtn:focus {
     color: white;
-    background: rgba(0, 0, 0, 0.699);
+    background: rgba(0, 0, 0, 0.61);
     cursor: pointer;
     -webkit-animation: buttonOn 0.3s forwards ease-in-out;
             animation: buttonOn 0.3s forwards ease-in-out;
