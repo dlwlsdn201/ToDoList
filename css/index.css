@@ -92,26 +92,30 @@ button:active {
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 2em 2em;
+  padding: 2rem 0;
   border-radius: 10px;
   width: 100%;
 }
 
 .container .contentsWrapper .js-weather {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.15);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: auto;
   font-size: 1.2rem;
-  width: 75%;
+  width: 100%;
   line-height: 1.5rem;
-  border-radius: 20px;
-  padding: 0.7em;
-  padding-top: 0.8em;
+  padding: 4% 15% 3%;
 }
 
 .container .contentsWrapper .js-weather .fas {
@@ -151,7 +155,7 @@ button:active {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 0.3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   padding: 0.3rem 0.5rem;
   border-radius: 20px;
   font-size: 3.2rem;
@@ -354,20 +358,19 @@ button:active {
 @media screen and (min-width: 375px) and (max-width: 769px) {
   .container .contentsWrapper {
     position: relative;
-    padding: 3% 0;
+    padding: 4% 0;
     width: 80%;
   }
   .container .contentsWrapper .js-weather {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.15);
     font-size: 1rem;
-    width: 50%;
+    width: 100%;
     line-height: 1.5rem;
-    border-radius: 20px;
-    padding: 0.7em;
-    padding-top: 0.8em;
+    padding-bottom: 0.7rem;
+    padding-top: 0.8rem;
   }
   .container .contentsWrapper .js-weather .fas {
-    margin-right: 0.3em;
+    margin-right: 0.3rem;
   }
   .container .contentsWrapper .js-weather .temp,
   .container .contentsWrapper .js-weather .place {
