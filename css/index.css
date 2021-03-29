@@ -318,6 +318,10 @@ button:active {
 
 .container .contentsWrapper .toDoList-Wrapper li span {
   text-align: left;
+  word-break: break-all;
+  -webkit-box-flex: 0.95;
+      -ms-flex: 0.95;
+          flex: 0.95;
 }
 
 .container .contentsWrapper .toDoList-Wrapper strong {
@@ -333,10 +337,14 @@ button:active {
 }
 
 .container .contentsWrapper .toDoList-Wrapper .removeBtn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   outline: none;
   padding: 1%;
   text-align: center;
   width: 1.8rem;
+  height: 1.8rem;
   border-radius: 50px;
   border: 1px solid #ebebeb;
   color: #f55050;
@@ -475,7 +483,7 @@ button:active {
   .container .contentsWrapper .toDoList-Wrapper ul {
     line-height: 1.8em;
   }
-  .container .contentsWrapper .toDoList-Wrapper li {
+  .container .contentsWrapper .toDoList-Wrapper ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -489,12 +497,6 @@ button:active {
     letter-spacing: 0.02em;
     list-style-type: square;
     font-size: 1.1em;
-  }
-  .container .contentsWrapper .toDoList-Wrapper li:first-child {
-    border: none;
-  }
-  .container .contentsWrapper .toDoList-Wrapper li span {
-    text-align: left;
   }
   .container .contentsWrapper .toDoList-Wrapper strong {
     font-size: 1.4rem;

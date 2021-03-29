@@ -241,6 +241,8 @@ button {
         
                 span{
                     text-align: left;
+                    word-break: break-all;
+                    flex: 0.95;
                 }
             }
         
@@ -256,10 +258,12 @@ button {
             }
 
             .removeBtn {
+                align-self: center;
                 outline: none;
                 padding: 1%;
                 text-align: center;
                 width: 1.8rem;
+                height: 1.8rem;
                 border-radius: 50px;
                 border: 1px solid #ebebeb;
                 color: #f55050;
@@ -382,26 +386,19 @@ button {
                 ul {
                     line-height: 1.8em;
                     // list-style: inside;
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        border-top: 1px solid rgba(250, 250, 250, 0.247);
+                        margin: 0.2em auto;
+                        padding-top: 0.3em;
+                        width: 90%;
+                        letter-spacing: 0.02em;
+                        list-style-type: square;
+                        font-size: 1.1em;
+                
                 }
                 
-                li {
-                    display: flex;
-                    justify-content: space-between;
-                    border-top: 1px solid rgba(250, 250, 250, 0.247);
-                    margin: 0.2em auto;
-                    padding-top: 0.3em;
-                    width: 90%;
-                    letter-spacing: 0.02em;
-                    list-style-type: square;
-                    font-size: 1.1em;
-            
-                    &:first-child {
-                        border: none;
-                    }
-            
-                    span{
-                        text-align: left;
-                    }
                 }
             
                 strong {
