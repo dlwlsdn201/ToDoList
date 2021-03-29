@@ -7,11 +7,24 @@ const ToDo_LocalStorage = "toDos";
 let toDos = [];
 let id = 1;
 
+
+//입력값 존재할 경우
+existToDo = (VALUE) => {
+    paintToDo(VALUE);
+    toDoInput.focus();
+    toDoInput.value = "";
+}
+
+//입력값 공백일 경우
+emptyToDo = () => {
+    alert('할 일이 입력되지 않았습니다. :('); 
+    toDoInput.focus();
+}
+
 handleSubmit = (event) => {
     event.preventDefault();
     const currentValue = toDoInput.value;
-    paintToDo(currentValue);
-    toDoInput.value = "";
+    (currentValue === ''? emptyToDo() : existToDo(currentValue))
 }
 
 deleteToDo = (event) => {

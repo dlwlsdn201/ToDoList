@@ -1,5 +1,5 @@
 const FORM = document.querySelector('#js-UserForm'),
-INPUT = FORM.querySelector("input"),
+nameInput = FORM.querySelector("input"),
 GREETING = document.querySelector('#js-Greeting'),
 WRAPPER = document.querySelector('#wrapper'),
 LINE = document.querySelector(".underline");
@@ -9,14 +9,22 @@ const userKey = 'currentUser',
 SHOWING = 'showing',
 EMPTY = 'empty';
 
+existName = (VALUE) => {
+    drawGreeting(VALUE);
+    saveName(VALUE);
+}
+
+emptyName = () => {
+    alert('사용자의 이름을 입력해주세요 :)'); 
+    nameInput.focus();
+}
+
 
 // INPUT에 입력된 값 로드 & 사용자 이름 저장 & 환영인사말 표시
 handleSubmit = (event) => {
     event.preventDefault();
-
-    const currentValue = INPUT.value;
-    drawGreeting(currentValue);
-    saveName(currentValue);
+    const currentValue = nameInput.value;
+    (currentValue === '' ? emptyName() : existName(currentValue));
 }
 
 
