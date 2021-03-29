@@ -1,4 +1,4 @@
-# To Do List 웹페이지 제작(Self Project #2)
+# To Do List 웹페이지 (Self Project #2)
   * Created by HTML5 / CSS3 / JavaScript(ES6)*
 
 ## **Preview**
@@ -18,8 +18,9 @@
   
 **2. CSS3**
   - flex 스타일을 기반으로 한 레이아웃
-  - 간단한 animation 사용
+  - animation 사용
   - SCSS을 이용하여 가독성 개선 
+  - 미디어 쿼리를 사용한 반응형 레이아웃(스마트폰/태블릿/노트북/데스크톱) 
   
   
   
