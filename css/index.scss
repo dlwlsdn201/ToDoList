@@ -55,8 +55,7 @@ button {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
 
-
-    .contentsWrapper {
+    .contents-wrapper {
         display: flex;
         position: relative;
         flex-flow: column nowrap;
@@ -69,7 +68,28 @@ button {
         border-radius: 10px;
         width: 100%;
 
-        .js-weather {
+        .date-wrapper {
+            // background: red;
+            position: absolute;
+            top:-5%;
+            width: auto;
+            right:3%;
+            opacity: 0.5;
+            
+            &:hover {
+                opacity: 1;
+                transition: opacity .3s ease-in-out;
+                cursor: default;
+            }
+
+            h4{
+                width:100%;
+                margin:0;
+                padding: 0;
+            }
+        }
+
+        .weather-wrapper {
             background: rgba(0, 0, 0, 0.15);
             display: flex;
             position: relative;
@@ -109,7 +129,7 @@ button {
             }
         }
 
-        .clock {
+        .clock-wrapper {
             display: flex;
             justify-content: center;
             margin-top: 0.3rem;
@@ -159,7 +179,8 @@ button {
             }
         }
 
-        .userBtn, .toDoBtn {
+        .userBtn,
+        .toDoBtn {
             align-self: stretch;
             border-radius: 5px;
             outline: none;
@@ -184,11 +205,11 @@ button {
         .js-Greeting {
             display: none;
         }
-        
+
         .resetBtn {
             position: absolute;
             bottom: -3rem;
-            background-color: rgba(0,0,0,0.1);
+            background-color: rgba(0, 0, 0, 0.1);
             width: 8rem;
             padding: 2% 1%;
             // align-self: ;
@@ -200,7 +221,7 @@ button {
 
             &:hover {
                 color: white;
-                background:rgba(0, 0, 0, 0.61);
+                background: rgba(0, 0, 0, 0.61);
                 cursor: pointer;
                 animation: buttonOn 0.3s forwards ease-in-out;
             }
@@ -210,19 +231,19 @@ button {
             }
         }
 
-        .toDoList-Wrapper {
+        .toDoList-wrapper {
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
             justify-content: center;
             margin-top: 1.5em;
             width: 100%;
-        
+
             ul {
                 line-height: 1.8em;
                 // list-style: inside;
             }
-            
+
             li {
                 display: flex;
                 justify-content: space-between;
@@ -233,23 +254,22 @@ button {
                 letter-spacing: 0.02em;
                 list-style-type: square;
                 font-size: 1.1em;
-                
-        
+
                 &:first-child {
                     border: none;
                 }
-        
-                span{
+
+                span {
                     text-align: left;
                     word-break: break-all;
                     flex: 0.95;
                 }
             }
-        
+
             strong {
                 font-size: 1.4rem;
             }
-        
+
             .toDoList {
                 box-sizing: border-box;
                 width: 95%;
@@ -269,70 +289,69 @@ button {
                 color: #f55050;
                 font-weight: 600;
                 background: none;
-            
+
                 &:hover {
                     cursor: pointer;
                     animation: removeOn 0.5s forwards ease-in-out;
                 }
-            
+
                 &:active {
                     color: white;
                     background: rgb(255, 67, 67);
                 }
             }
-            
         }
     }
-        
-// 모바일 레이아웃
-    @media screen and (min-width: 375px) and (max-width: 769px){
-        .contentsWrapper {
+
+    // 모바일 레이아웃
+    @media screen and (min-width: 375px) and (max-width: 769px) {
+        .contents-wrapper {
             position: relative;
             padding: 4% 0;
             width: 80%;
 
-            .js-weather {
+            .weather-wrapper {
                 background: rgba(0, 0, 0, 0.15);
                 font-size: 1rem;
                 width: 100%;
                 line-height: 1.5rem;
                 padding-bottom: 0.7rem;
                 padding-top: 0.8rem;
-    
+
                 .fas {
                     margin-right: 0.3rem;
                 }
-    
+
                 .temp,
                 .place {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                 }
-    
+
                 .temp .fas {
                     font-size: 1.5em;
                 }
-    
+
                 .place .fas {
                     font-size: 1.2em;
                 }
-    
+
                 .place i {
                     color: #f5f0b2;
                 }
             }
-    
-            .clock {
+
+            .clock-wrapper {
                 padding: 1%;
                 font-size: 2rem;
                 width: 53%;
             }
-    
+
             .userForm {
                 margin-top: 2em;
             }
-    
+
             .userInput,
             .toDoInput {
                 font-size: 1rem;
@@ -346,17 +365,18 @@ button {
                 &::placeholder {
                     color: rgba(255, 255, 255, 0.678);
                 }
-    
+
                 &:hover {
                     border: 1px solid #e7e3e3;
                 }
-    
+
                 &:focus {
                     background: #1f1f1fcb;
                 }
             }
 
-            .userBtn, .toDoBtn {
+            .userBtn,
+            .toDoBtn {
                 align-self: stretch;
                 border-radius: 5px;
                 outline: none;
@@ -364,25 +384,25 @@ button {
                 border: 1px solid #e7e3e3da;
                 color: #e7e3e3;
                 background: none;
-    
+
                 &:active {
                     animation: buttonOn 0.5s forwards ease-in-out;
                     background: #1f1f1fcb;
                 }
             }
-    
+
             .js-Greeting {
                 display: none;
             }
-    
-            .toDoList-Wrapper {
+
+            .toDoList-wrapper {
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
                 justify-content: center;
                 margin-top: 1rem;
                 width: 100%;
-            
+
                 ul {
                     line-height: 1.8em;
                     // list-style: inside;
@@ -396,15 +416,13 @@ button {
                         letter-spacing: 0.02em;
                         list-style-type: square;
                         font-size: 1.1em;
-                
+                    }
                 }
-                
-                }
-            
+
                 strong {
                     font-size: 1.4rem;
                 }
-            
+
                 .toDoList {
                     box-sizing: border-box;
                     width: 90%;
@@ -420,19 +438,19 @@ button {
                     border-radius: 50px;
                     border: 1px solid #bebebe;
                     color: #ee3d3d;
-                
+
                     &:active {
                         color: white;
                         background: rgb(255, 67, 67);
                     }
-                }          
+                }
             }
 
             .showing {
                 font-size: 1.3rem;
                 margin-top: 1rem;
             }
-            
+
             .resetBtn {
                 position: absolute;
                 bottom: -2.5rem;
@@ -445,11 +463,10 @@ button {
                 font-size: 1rem;
                 font-weight: bold;
                 color: #adadad;
-    
 
                 &:focus {
                     color: white;
-                    background:rgba(0, 0, 0, 0.61);
+                    background: rgba(0, 0, 0, 0.61);
                     cursor: pointer;
                     animation: buttonOn 0.3s forwards ease-in-out;
                 }

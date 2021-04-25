@@ -11,11 +11,14 @@
 </head>
 <body>
     <div class="container" id="container">
-        <div class="contentsWrapper" id="wrapper">
-            <div class="clock" id="js-clock">
+        <div class="contents-wrapper" id="wrapper">
+            <div class="date-wrapper" id="date">
+                <h4 id="js-date-content"></h4>
+            </div>
+            <div class="clock-wrapper" id="clock">
                 <h3 id="js-clock-content">00:00</h3>
             </div>
-            <div class="js-weather" id="js-weather">
+            <div class="weather-wrapper" id="weather">
                 <div class='temp'></div>
                 <div class='place'></div>
             </div>
@@ -29,7 +32,7 @@
                 <input type="text" id="toDo" placeholder="Write To Do" class="toDoInput"/>
                 <button class="toDoBtn" id="inputBtn">등록</button>
             </form>
-            <div class="toDoList-Wrapper">
+            <div class="toDoList-wrapper">
                 <strong>To Do List</strong>
                 <ul class="toDoList" id="toDoList">
                 </ul>

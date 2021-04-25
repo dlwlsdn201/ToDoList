@@ -1,4 +1,4 @@
-const WEATHER = document.querySelector("#js-weather");
+const WEATHER = document.querySelector("#weather");
 const tempBLOCK = WEATHER.querySelector('.temp');
 const placeBLOCK = WEATHER.querySelector('.place');
 const API_KEY = 'b8dbfe24ff72d50050db7e51e0dd5b77';
