@@ -390,6 +390,7 @@ button:active {
 
 @media screen and (min-width: 375px) and (max-width: 769px) {
   .container .contents-wrapper {
+    font-size: 0.7rem;
     position: relative;
     padding: 4% 0;
     width: 80%;
@@ -517,6 +518,9 @@ button:active {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-top: 1px solid rgba(250, 250, 250, 0.247);
     margin: 0.2em auto;
     padding-top: 0.3em;
