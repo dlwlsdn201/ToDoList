@@ -2,6 +2,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
 }
 
 body {
@@ -163,7 +164,7 @@ button {
             border-radius: 5px;
             outline: none;
             color: #ffe59ed5;
-            border: 1px solid #e7e3e3da;
+            border: 1px solid #e7e3e32d;
             background: none;
             padding: 0 0.5rem;
             &::placeholder {
@@ -184,7 +185,7 @@ button {
             align-self: stretch;
             border-radius: 5px;
             outline: none;
-            border: 1px solid #e7e3e38c;
+            border: 1px solid #e7e3e32d;
             margin-left: 0.3rem;
             color: #e7e3e3;
             background: none;
@@ -241,19 +242,28 @@ button {
 
             ul {
                 line-height: 1.8em;
+                
                 // list-style: inside;
             }
 
             li {
                 display: flex;
                 justify-content: space-between;
-                border-top: 1px solid white;
+                // border-top: 1px solid white;
                 margin: 0.2em auto;
                 padding-top: 0.3em;
-                width: 90%;
+                width: 85%;
                 letter-spacing: 0.02em;
                 list-style-type: square;
                 font-size: 1.1em;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 30%;
+                    left: calc(50% - (30%/2));
+                    border-top: 1px dashed white;
+                }
 
                 &:first-child {
                     border: none;
